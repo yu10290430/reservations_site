@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kadai2</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+       <nav>
+        <div class="left_nav">
+        <a href="https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/?_c9_id=livepreview0&_c9_host=https://console.aws.amazon.com">
+          <img class= "header_logo" alt="サイトのロゴ画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
+        </a>
+        </div>
+        <div class="right_nav">
+        <% if user_signed_in? %>
+        <%= link_to 'プロフィール変更', edit_user_registration_path %>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        <% else %>
+        <%= link_to 'ログイン', new_user_session_path,{class: "sighin"} %>
+        <%= link_to '登録する', new_user_registration_path,{class: "sighup"} %>
+        <% end %>
+        </div>
+       </nav>
+    </header>
+    <div class= "message">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    </div>
+    <%= yield %>
+    <footer>
+      <p class="footer_logo">© 2020 POTEPAN.INC.</p>
+    </footer>
+  </body>
+</html>

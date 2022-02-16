@@ -1,0 +1,32 @@
+<main class="reservations_index_main">
+  <div class="reservations_index_group">
+   <h3 class="reservations_title">予約済みルーム一覧</h3>
+    <table class="reservations_index_table">
+      <thead>
+        <tr class= "reservations_index_tr">
+          <th class= "reservations_index_th">ルーム画像</th>
+          <th class= "reservations_index_th">ルーム名</th>
+          <th class= "reservations_index_th">ルーム紹介</th>
+          <th class= "reservations_index_th">合計料金</th>
+          <th class= "reservations_index_th">開始日</th>
+          <th class= "reservations_index_th">終了日</th>
+          <th class= "reservations_index_th">予約確定日時</th>
+        </tr>
+      </thead>
+ 
+      <tbody>
+        <% @reservations.each do |reservation| %>
+          <tr class= "reservations_index_tr">
+            <td class= "reservations_index_td"><%= reservation.room_image %></td>
+            <td class= "reservations_index_td"><%= reservation.room_name %></td>
+            <td class= "reservations_index_td"><%= reservation.memo %></td>
+            <td class= "reservations_index_td"><%= reservation.start_date %></td>
+            <td class= "reservations_index_td"><%= reservation.start_date %></td>
+            <td class= "reservations_index_td"><%= reservation.end_date %></td>
+            <td class= "reservations_index_td"><%= reservation.created_at %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>

@@ -1,0 +1,45 @@
+<main class="room_new">
+<div class= "row_view">
+<div class= "row">
+<div class="room_nav">
+  <p class="room_title">基本情報</p>
+</div>
+ <div class="room-box">
+
+    <%= form_for(@room) do |f| %>
+      <table class="room_new_table">
+         <tr>
+          <th> ルーム情報登録 </th>
+        </tr>
+        <tr class"room_text_field">
+          <th class="room_lavel"><%= f.label :room_name ,"ルーム名" %><p class= mark>必須</p></th>
+          <td><%= f.text_field :room_name,placeholder: "ルーム名を入力",:class => 'room_field'%></td>
+        </tr>
+ 
+        <tr class"memo_textarea">
+          <th class="room_lavel"><%= f.label :memo ,"ルーム紹介" %><p class= mark>必須</p></th>
+          <td><%= f.text_area :memo,placeholder: "ルーム説明を入力",:class => 'room_area' %></td>
+        </tr>
+ 
+        <tr class"room_text_field">
+          <th class="room_lavel"><%= f.label :price ,"料金" %><p class= mark>必須</p></th>
+          <td><%= f.text_field :price,placeholder: "一日当たりの料金を入力",:class => 'room_field' %></td>
+        </tr>
+ 
+        <tr class"room_text_field">
+          <th class="room_lavel"><%= f.label :adress ,"住所" %><p class= mark>必須</p></th>
+          <td><%= f.text_field :adress,placeholder: "住所を入力",:class => 'room_field' %></td>
+        </tr>
+        <tr class"room_text_field">
+          <th class="room_lavel"><%= f.label :room_image ,"ルーム画像" %><p class= mark>必須</p></th>
+          <td><%= f.file_field :avatar_path, class: 'room_field', accept: 'image/*' %></td>
+        </tr>
+        <tr>
+          <th> <%= f.submit "登録",:class => 'room_register'%></th>
+        </tr>
+    <% end %>
+     </table>
+  </div>
+  </div>
+  </div>
+</main>

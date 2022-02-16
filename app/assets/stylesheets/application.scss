@@ -1,0 +1,250 @@
+@import "bootstrap";  ＜（追加）
+/*ヘッダー*/
+body{
+  margin:0;
+}
+nav {
+    background-color: black;
+    display: flex;
+}
+.header_logo{
+  margin-left: 50px;
+}
+.right_nav {
+    position: absolute;
+    right: 25px;
+    top: 23px;
+}
+.sighin {
+    color: white;
+    text-decoration: none;
+    background-color: #4169e1;
+    padding: 10px;
+    border-radius: 5px;
+}
+.sighup {
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+footer {
+    background-color: black;
+    height: 200px;
+    margin-top: 100px;
+}
+.footer_logo{
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 90px;
+}
+.message {
+    width: 100%;
+    position: fixed;
+    height: 50px;
+}
+/*メインページ*/
+main.main_page{
+  height: 1000px;
+}
+.top_main{
+  background-image: url("https://presite-potepancamp-rails-02.herokuapp.com/assets/img_cover_top.jpg");
+  width: 100%;
+  height: 550px;
+  background-size: cover;
+  margin-bottom: 40px;
+}
+img.area-image {
+    width: 200px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    float: left;
+    position:relative;
+    margin-right: 30px;
+}
+h3.form_area_title {
+    font-size: 25px;
+}
+p.search_lavel {
+    font-size: 13px;
+}
+.form_area {
+    background-color: white;
+    width: 450px;
+    height: 230px;
+    border-radius: 5px;
+    position: absolute;
+    top: 220px;
+    left: 150px;
+    padding: 25px 20px;
+}
+span{
+  position:absolute;
+  z-index: 3;
+  color: white;
+    font-weight: 900;
+    font-size: 20px;
+    padding: 315px 80px;
+}
+.select_area{
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+/*新規登録、ログインページ*/
+.sighup_main{
+  text-align: center;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 100px;
+  height: 350px;
+}
+.mark{
+  display: inline-block;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  padding: 3px 2px;
+  margin-left: 3px;
+}
+.sigh_field {
+    height: 25px;
+    width: 250px;
+}
+.new_account {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #00bfff;
+    border: none;
+    width: 300px;
+    height: 33px;
+    border-radius: 4px;
+}
+.page_link {
+    font-size: 14px;
+    color: #00bfff;
+    text-decoration: none;
+}
+
+/*room_index*/
+main.room_main {
+    margin-top: 40px;
+    margin-left: 60px;
+    height: 450px;
+}
+table.room_index_table {
+  width: 800px;
+}
+th.room_index_th{
+    text-align: center;
+    font-size: 13px;
+}
+tr.room_index_tr {
+    height: 35px;
+}
+td.room_index_td {
+    text-align: center;
+    font-size: 13px;
+}
+h5{
+  margin-bottom: 20px;
+}
+
+/*room_new*/
+main.room_new {
+    height: 600px;
+}
+.room_nav {
+    height: 700px;
+    background-color: white;
+}
+.room-box{
+    text-align: center;
+    margin-bottom: 70px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+.row_view {
+    background-color: #f5f5f5;
+}
+.room_new_table{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 350px;
+  background-color: white;
+}
+.room_title{
+  width: 250px;
+  padding-left: 60px;
+  color: blue;
+  padding-top: 40px;
+}
+th.room_lavel {
+  text-align: left;
+  padding-left: 30px;
+}
+.room_field{
+  width: 500px;
+  border: solid 1px #dcdcdc;
+  margin-left: 70px;
+  margin-right: 20px;
+}
+.room_area{
+  width: 500px;
+  border: solid 1px #dcdcdc;
+  margin: 15px 20px 30px 70px;
+  margin-right: 20px;
+  height: 100px;
+}
+.room_register {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #00bfff;
+    border: none;
+    width: 100px;
+    height: 33px;
+    border-radius: 4px;
+}
+tr{
+    border: solid 1px #e6e6e6;
+    height: 70px;
+}
+
+/*予約一覧ページ*/
+main.reservations_index_main {
+    height: 700px;
+    width: 100%;
+    margin: 30px 50px;
+}
+h3.reservations_title {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+table.reservations_index_table {
+    width: 90%;
+    text-align: center;
+}
+tr.reservations_index_tr {
+    height: 30px;
+}
+th.reservations_index_th {
+    font-size: 13px;
+}
+/*予約ページ*/
+main.rooms_show_main {
+    margin: 30px 300px;
+}

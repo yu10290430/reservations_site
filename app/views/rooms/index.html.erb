@@ -1,0 +1,30 @@
+<main class="room_main">
+  <div class ="room_index_title">
+  <h5>登録済みルーム一覧</h5>
+  </div>
+    <table class="room_index_table">
+      <thead>
+        <tr class= "room_index_tr">
+          <th class= "room_index_th">ルーム画像</th>
+          <th class= "room_index_th">ルーム名</th>
+          <th class= "room_index_th">ルーム紹介</th>
+          <th class= "room_index_th">料金</th>
+          <th class= "room_index_th">作成日</th>
+        </tr>
+      </thead>
+ 
+      <tbody>
+        <% @rooms.each do |room| %>
+          <tr class= "room_index_tr">
+            <td class="room_index_td">
+            <%= image_tag room.room_image.src %>
+            </td>
+            <td class="room_index_td"><%= room.room_name %></td>
+            <td class="room_index_td"><%= room.memo %></td>
+            <td class="room_index_td">¥<%= room.price %></td>
+            <td class="room_index_td"><%= room.created_at %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</main>
