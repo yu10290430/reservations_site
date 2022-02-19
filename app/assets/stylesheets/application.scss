@@ -140,7 +140,7 @@ span{
 main.room_main {
     margin-top: 40px;
     margin-left: 60px;
-    height: 450px;
+    height: auto;
 }
 table.room_index_table {
   width: 800px;
@@ -155,6 +155,10 @@ tr.room_index_tr {
 td.room_index_td {
     text-align: center;
     font-size: 13px;
+}
+.room_image {
+    width: 180px;
+    height: 100px;
 }
 h5{
   margin-bottom: 20px;
@@ -219,7 +223,7 @@ th.room_lavel {
     height: 33px;
     border-radius: 4px;
 }
-tr{
+tr {
     border: solid 1px #e6e6e6;
     height: 70px;
 }
@@ -246,5 +250,52 @@ th.reservations_index_th {
 }
 /*予約ページ*/
 main.rooms_show_main {
-    margin: 30px 300px;
+    width: 100%;
+    margin: 20px 200px;
+}
+.room_navs {
+    display: flex;
+    flex-direction: column;
+    margin-right: 23px;
+}
+img.room_images {
+    width: 600px;
+}
+p.room_name {
+    font-weight: 700;
+    font-size: 18px;
+}
+p.room_adress {
+    font-size: 14px;
+}
+table.relatives_new_table {
+    width: 310px;
+    height: 380px;
+    border: solid 1px #e6e6e6;
+}
+tr.reservation_text_field {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+td.room_price {
+    padding-top: 30px;
+    font-size: 20px;
+}
+th.reservation_lavel {
+    font-weight: 400;
+    font-size: 12px;
+}
+.reservation_field{
+    width:270px;
+}
+.reservation_register {
+    width: 270px;
+    color: white;
+    background-color: #00bfff;
+    border: none;
+    border-radius: 3px;
+    height: 32px;
+    margin-top: 20px;
 }

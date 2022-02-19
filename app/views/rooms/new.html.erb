@@ -32,7 +32,7 @@
         </tr>
         <tr class"room_text_field">
           <th class="room_lavel"><%= f.label :room_image ,"ルーム画像" %><p class= mark>必須</p></th>
-          <td><%= f.file_field :room_image,class: 'room_field', accept: 'image/*' %></td>
+          <td><%= f.file_field :room_image, id: :room_room_image,class: 'room_field' %></td>
         </tr>
         <tr>
           <th> <%= f.submit "登録",:class => 'room_register'%></th>

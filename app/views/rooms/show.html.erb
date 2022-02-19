@@ -1,0 +1,37 @@
+<main class="rooms_show_main">
+<div class= "row">
+ <div class="room_navs">
+  <%=  image_tag @room.room_image, class: 'room_images' %>
+  <p class="room_name"><%= @room.room_name %></p>
+  <p class="room_adress"><%= @room.adress %></p>
+  <p class="room_memo"><%= @room.memo %></p>
+  </div>
+
+ <div class="reservation-box">
+   <%= form_tag({ :controller => 'reservations', :action => 'create' },{ :method => :post}) do %>
+      <table class="relatives_new_table">
+        <tr class= "reservation_text_field">
+         <td class="room_price">¥<%= @room.price %> / 日</td>
+        </tr>
+        <tr class= "reservation_text_field">
+          <th class="reservation_lavel"><%= label :session,:start_date ,"開始日" %></th>
+          <td class="reservation_new_td"><%= date_field :session, :start_date,placeholder: "年/月/日",:class => 'reservation_field'%></td>
+        </tr>
+         <tr class= "reservation_text_field">
+          <th class="reservation_lavel"><%= label :session,:end_date ,"終了日" %></th>
+          <td class="reservation_new_td"><%= date_field :session,:end_date,placeholder: "年/月/日",:class => 'reservation_field'%></td>
+        </tr>
+        <tr class= "reservation_text_field">
+          <th class="reservation_lavel"><%= label :session,:number_of_people ,"人数" %></th>
+          <td class="reservation_new_td"><%= text_field :session,:number_of_people,:class => 'reservation_field'%></td>
+        </tr>
+        <tr class= "reservation_text_field">
+          <td class="reservation_new_td"> <%= submit_tag "予約する",:class => 'reservation_register'%></td>
+        </tr>
+    <% end %>
+     </table>
+  </div>
+  </div>
+</main>  
+</main>
+

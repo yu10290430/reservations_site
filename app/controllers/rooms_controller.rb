@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   def index
-    @rooms = Room.all
+     @rooms = current_user.rooms.order(updated_at: 'DESC')
   end
 
   def new
@@ -8,7 +8,8 @@ class RoomsController < ApplicationController
   end
   
   def create
-    @room = Room.new(params.require(:room).permit(:room_id, :room_name, :memo, :price, :adress, :room_image))
+    @room = Room.new(params.require(:room).permit(:room_id, :room_name, :memo, :price, :adress, :room_image, :user_id))
+    @room.user = current_user
       if @room.save
         redirect_to :rooms
       else
@@ -19,11 +20,6 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     @reservation = Reservation.new
+    
   end
-  private
-  
-  def room_params
-    params.require(:room).permit(:room_name, :memo, :price, :adress, :room_image )
-  end
-  
 end
