@@ -22,4 +22,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :thumb do
     process resize_to_fill: [100, 100]
   end
+  
+  def default_url
+  "image_none.jpeg"
+  end
+  
 end

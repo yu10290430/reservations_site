@@ -1,6 +1,7 @@
 class ReservationsController < ApplicationController
   def index
     @reservations = current_user.reservations.order(updated_at: 'DESC')
+
   end
 
   def new
@@ -9,7 +10,7 @@ class ReservationsController < ApplicationController
   end
   
   def create
-    @reservation = Reservation.new(params.permit(:start_date, :end_date,:number_of_people,:room_id, :user_id))
+    @reservation = current_user.reservations.new(params.require(:reservation).permit(:start_date, :end_date, :number_of_people,:room_id))
     if @reservation.save
       flash[:notice] = "予約新規登録しました"
       redirect_to :reservations
@@ -17,6 +18,9 @@ class ReservationsController < ApplicationController
       flash.now[:error] = "予約できませんでした。もう一度入力し直してください。"
       render template: "rooms/show"
     end
+    
+   
+  
   end
 
   def show
