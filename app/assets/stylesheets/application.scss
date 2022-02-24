@@ -10,6 +10,16 @@ nav {
 .header_logo{
   margin-left: 50px;
 }
+.left_nav {
+  display: flex;
+}
+.search_area {
+    margin-top: 20px;
+    margin-right: 5px;
+}
+.search_key {
+    margin-top: 20px;
+}
 .right_nav {
     position: absolute;
     right: 25px;
@@ -51,6 +61,7 @@ footer {
 /*メインページ*/
 main.main_page{
   height: 1000px;
+  margin-bottom: 30px;
 }
 .top_main{
   background-image: url("https://presite-potepancamp-rails-02.herokuapp.com/assets/img_cover_top.jpg");
@@ -74,6 +85,7 @@ h3.form_area_title {
 }
 p.search_lavel {
     font-size: 13px;
+    margin-bottm: 0;
 }
 .form_area {
     background-color: white;
@@ -84,6 +96,18 @@ p.search_lavel {
     top: 220px;
     left: 150px;
     padding: 25px 20px;
+}
+input.top_search_area {
+    width: 100%;
+    margin-bottom: 20px;
+}
+input.search_button {
+    width: 100%;
+    color: white;
+    background-color: #00bfff;
+    border: none;
+    border-radius: 4px;
+    height: 30px;
 }
 span{
   position:absolute;
@@ -259,6 +283,7 @@ main.rooms_show_main {
 }
 img.room_images {
     width: 600px;
+    height: 350px;
 }
 p.room_name {
     font-weight: 700;
@@ -366,4 +391,39 @@ input.account_edit_btn {
     background-color: white;
     border: solid 1px black;
     border-radius: 3px;
+}
+/*検索画面*/
+main.search_main {
+    margin: 30px 50px;
+}
+h3.search_result {
+    font-size: 23px;
+    margin-bottom: 30px;
+}
+.col-3 {
+    border: solid 1px #e6e6e6;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    padding: 0;
+    flex: 0 0 24%;
+    max-width: 22%;
+}
+p.search_name {
+    font-weight: 700;
+    color: grey;
+    margin-left: 10px;
+}
+p.search_adress {
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    margin-left: 10px;
+}
+p.search_price {
+    text-align: right;
+    margin-right: 10px;
+}
+.room_image {
+    width: 100%;
+    height: 150px;
 }

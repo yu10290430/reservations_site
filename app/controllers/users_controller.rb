@@ -9,14 +9,14 @@ class UsersController < ApplicationController
   end
 
   def profile
-    @user = User.find_by(id: current_user.id)
+     @user = User.where(user_id: current_user.id).where.not(user_image: nil).order(updated_at: 'DESC')
   end
   
   def edit
     @user = current_user
   end
   
-  def updated
+  def update
     @user = current_user
     if @user.update(params.require(:user).permit(:user_image, :name, :introduction))
       flash[:notice]="ユーザーIDが「#{@user.id}」の情報を更新しました"

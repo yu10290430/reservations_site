@@ -17,7 +17,7 @@
         <% @rooms.each do |room| %>
           <tr class= "room_index_tr">
             <td class="room_index_td">
-            <%= link_to image_tag room.room_image, class: 'room_image' %>
+            <%= link_to image_tag room.room_image.url, class: 'room_image' %>
             </td>
             <td class="room_index_td"><%= link_to room.room_name,room_path(room)%></td>
             <td class="room_index_td"><%= room.memo %></td>
