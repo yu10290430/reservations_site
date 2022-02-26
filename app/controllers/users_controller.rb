@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def profile
-     @user = User.where(user_id: current_user.id).where.not(user_image: nil).order(updated_at: 'DESC')
+     @user = current_user
   end
   
   def edit

@@ -8,7 +8,7 @@
   </div>
 
  <div class="reservation-box">
-   <%= form_with model:@reservation do |f| %>
+   <%= form_with model:@reservation,method: :post, url:reservations_confirm_path do |f| %>
    <%= f.hidden_field :room_id, value: @room.id %>
       <table class="relatives_new_table">
         <tr class= "reservation_text_field">
