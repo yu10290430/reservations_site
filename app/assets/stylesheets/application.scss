@@ -55,7 +55,7 @@ footer {
 }
 .message {
     width: 100%;
-    position: fixed;
+    position: absolute;
     height: 50px;
 }
 /*メインページ*/
@@ -164,6 +164,7 @@ main.room_main {
     margin-top: 40px;
     margin-left: 60px;
     height: auto;
+    margin-bottom: 200px;
 }
 table.room_index_table {
   width: 800px;
@@ -326,6 +327,23 @@ th.reservation_lavel {
 .reservation_image {
     width: 200px;
 }
+/*予約詳細ページ*/
+main.reservation_show_main {
+    background-color: #fffaf0;
+    height: 550px;
+}
+table.relatives_show_table {
+    margin: 40px auto;
+    width: 700px;
+    background-color: white;
+}
+tr.reservation_show_field {
+    height: 60px;
+}
+th.reservation_show_lavel {
+    width: 200px;
+    padding-left: 30px;
+}
 /*アカウント*/
 main.account_view {
     background-color: #f5f5f5;
@@ -357,6 +375,7 @@ th.account_th {
 .btn.btn-primary {
     width: 120px;
 }
+
 /*プロフィール*/
 th.profile_th {
     padding-left: 25px;
@@ -426,4 +445,55 @@ p.search_price {
 .room_image {
     width: 100%;
     height: 150px;
+}
+/*予約確認ページ*/
+table.confirm_table {
+    margin: 40px auto;
+    width: 450px;
+}
+tbody.confirm_tbody {
+    border: solid 1px #dcdcdc;
+}
+tr.confirm_tr {
+    height: 50px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px
+}
+td.confirm_title {
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 20px;
+}
+td.confirm_td {
+    padding-left: 15px;
+    margin-top: 20px;
+}
+td.confirm_btn {
+    padding: 0 15px;
+}
+td.confirm_td_date {
+    background-color: #dcdcdc;
+    border-radius: 4px;
+    margin: 10px 15px;
+}
+th.confirm_th {
+    padding-left: 15px;
+}
+p.confirm_instructions {
+    font-size: 12px;
+}
+.confirm_bule_btn {
+    border: none;
+    background-color: #00bfff;
+    color: white;
+    padding: 3px 158px;
+    border-radius: 4px;
+}
+.confirm_gray_btn {
+    background-color: gray;
+    color: white;
+    border-radius: 3px;
+    padding: 5px 135px;
 }
