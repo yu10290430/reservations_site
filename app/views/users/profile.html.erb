@@ -8,9 +8,9 @@
           <th class="profile_th">プロフィール</th>
         </tr>
         <tr>
-        <%= image_tag @user.user_image.url, class: 'user_image' %></td>
+        <td><%= image_tag @user.user_image.url, class: 'user_image' %></td>
         </tr>
-         <%= form_with model:@user do |f|%>
+         <%= form_with model:@user, url: user_path(@user), local: true do |f|%>
         <tr>
           <th class="profile_th"><%= f.label :user_image ,"アイコン画像" %><p class= mark>必須</p></th>
           <td><%= f.file_field :user_image %></td>
@@ -23,7 +23,7 @@
  
         <tr>
           <th class="profile_th"><%= f.label :introduction ,"自己紹介" %><p class= mark>必須</p></th>
-          <td><%= f.text_field :introduction,placeholder: "自己紹介を入力" %></td>
+          <td><%= f.text_area :introduction,placeholder: "自己紹介を入力" %></td>
         </tr>
          <tr>
           <th class="profile_th"><%= f.submit "更新", class: 'btn btn-primary' %></th>

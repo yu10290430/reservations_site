@@ -1,6 +1,7 @@
 class RoomsController < ApplicationController
+ before_action :authenticate_user!, except: [:show, :search]
   def index
-     @rooms = Room.where(user_id: current_user.id).where.not(room_image: nil).order(updated_at: 'DESC')
+    @rooms = Room.where(user_id: current_user.id).where.not(room_image: nil).order(updated_at: 'DESC')
   end
 
   def new

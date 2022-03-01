@@ -1,9 +1,13 @@
 <main class="rooms_show_main">
 <div class= "row">
+ 
  <div class="room_navs">
-  <%=  image_tag @room.room_image.url, class: 'room_images' %>
+  <a><%= image_tag current_user.user_image.url, class: 'room_user_image'%></a>
+  <a><%=  image_tag @room.room_image.url, class: 'room_images' %></a>
+  <div class="image_right">
   <p class="room_name"><%= @room.room_name %></p>
   <p class="room_adress"><%= @room.adress %></p>
+  </div>
   <p class="room_memo"><%= @room.memo %></p>
   </div>
 
