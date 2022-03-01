@@ -1,4 +1,4 @@
 <div class="left-nav">
-        <%= link_to 'アカウント', '/users/account', class: 'account_link' %>
-        <%= link_to 'プロフィール', '/users/profile', class: 'account_link'  %>
+        <%= link_to 'アカウント', users_account_path, class: 'account_link' %>
+        <%= link_to 'プロフィール',edit_user_path(current_user.id), class: 'account_link'  %>
     </div>
