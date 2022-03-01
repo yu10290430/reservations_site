@@ -334,12 +334,12 @@ main.rooms_show_main {
     flex-direction: column;
     margin-right: 23px;
 }
-img.room_user_images {
+img.room_images {
     width: 600px;
     height: 350px;
     margin-bottom: 40px;
 }
-img.room_images {
+img.room_user_image {
     height: 60px;
     width: 60px;
     border-radius: 100px;
@@ -347,8 +347,8 @@ img.room_images {
 }
 .image_right {
     position: absolute;
-    top: 570px;
-    left: 270px;
+    top: 480px;
+    left: 290px;
 }
 p.room_name {
     font-weight: 700;
@@ -574,4 +574,3 @@ p.confirm_instructions {
     border-radius: 3px;
     padding: 5px 135px;
 }
-

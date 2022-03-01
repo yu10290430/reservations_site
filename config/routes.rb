@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   
   post 'reservations/confirm' => 'reservations#confirm'
   post 'reservations/back'
-  resources :reservations, only: [:index, :new, :create, :show] 
+  resources :reservations, only: [:index, :create, :show] 
  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
  resources :posts

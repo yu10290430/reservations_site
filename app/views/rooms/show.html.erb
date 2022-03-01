@@ -2,8 +2,8 @@
 <div class= "row">
  
  <div class="room_navs">
-  <a><%= image_tag current_user.user_image.url, class: 'room_user_image'%></a>
   <a><%=  image_tag @room.room_image.url, class: 'room_images' %></a>
+  <a><%= image_tag current_user.user_image.url, class: 'room_user_image'%></a>
   <div class="image_right">
   <p class="room_name"><%= @room.room_name %></p>
   <p class="room_adress"><%= @room.adress %></p>
