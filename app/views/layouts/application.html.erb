@@ -27,20 +27,9 @@
         </div>
         </div>
         <div class="right_nav">
-       
         <% if user_signed_in? %>
-        <p class="user_name"><%= current_user.name %></p>
-        <input type="checkbox" id="input">
-        <label for="input" class= "menu" ><%= image_tag current_user.user_image.url, class: 'menu_image'%></label>
-        <div id="contens">
-          <ul id="menu_list">
-            <li class="menu_li"><%= link_to 'ルーム登録', new_room_path,{class: "page_link"} %></li>
-            <li class="menu_li"><%= link_to '予約済みルーム一覧', reservations_path,{class: "page_link"} %></li>
-            <li class="menu_li"><%= link_to '登録済みルーム一覧', rooms_path,{class: "page_link"} %></li>
-            <li class="menu_li"><%= link_to '設定', users_account_path,{class: "page_link"} %></li>
-            <li class="menu_li"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-          </ul>
-        </div>
+        <%= link_to 'プロフィール変更', edit_user_registration_path %>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
         <% else %>
         <%= link_to 'ログイン', new_user_session_path,{class: "sighin"} %>
         <%= link_to '登録する', new_user_registration_path,{class: "sighup"} %>

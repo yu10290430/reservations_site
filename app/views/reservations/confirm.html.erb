@@ -8,7 +8,6 @@
      <td class="confirm_td"><%= @reservation.room.price %>/日</td>
     </tr>
     <%= form_with(model: @reservation, method: :post, local: true) do |f| %>
-     <%= f.hidden_field :room_id, value: @room.id %>
     <tr class="confirm_tr">
      <th class="confirm_th">開始日</th>
      <td class="confirm_td_date">
@@ -42,7 +41,7 @@
      <td class="confirm_btn"><%= f.submit "予約を確定", class: 'confirm_bule_btn' %></td>
     </tr>
      <tr class="confirm_tr">
-     <td class="confirm_btn"><%= f.submit 'ルーム詳細に戻る', name: :back, class: "confirm_gray_btn" %></td>
+     <td class="confirm_btn"><%= link_to 'ルーム詳細に戻る', room_path(@reservation.room_id), class: "confirm_gray_btn" %></td>
     </tr>
     <% end %>
    </tbody>

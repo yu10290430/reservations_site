@@ -4,6 +4,12 @@
   <div class= "form_area">
   <h3 class= "form_area_title">Potepan Shareでまだ体験したことない旅をしよう</h3>
   <p class="search_lavel">エリア</p>
+  <%= link_to '予約一覧', 'https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/reservations' %>
+  <%= link_to 'アカウント', 'https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/users/account',{class: "page_link"} %>
+  <%= link_to '新規ルーム登録', 'https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/rooms/new',{class: "page_link"} %>
+  <%= link_to '登録済ルーム一覧', 'https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/rooms',{class: "page_link"} %>
+  <%= link_to '予約詳細画面', 'https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/reservations/8',{class: "page_link"} %>
+  <%= link_to '予約確認画面', 'https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/reservations/confirm',{class: "page_link"} %>
    <div class="search_area">
            <%= form_with url:rooms_search_path, local: true, method: :get do |f| %>
            <%= f.text_field :area, value: @area, placeholder: "東京",:class => 'top_search_area' %><br> 
@@ -14,32 +20,22 @@
   </div>
   <div class="container">
     <h2 class="select_area">おすすめのエリア</h2>
-    <div class="item_field">
       <div class="area_item">
-     <p class="area_title">東京</p>
-      <a href="https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/rooms/search?utf8=%E2%9C%93&area=%E6%9D%B1%E4%BA%AC&commit=+%E6%8E%A2%E3%81%99">
+      <span>東京</span>
       <img class="area-image" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_tokyo.jpg">
-      </a>
       </div>
       <div class="area_item">
-      <p class="area_title">大阪</p>
-      <a href="https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/rooms/search?utf8=%E2%9C%93&area=%E5%A4%A7%E9%98%AA&commit=+%E6%8E%A2%E3%81%99">
+      <span>大阪</span>
       <img class="area-image" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_osaka.jpg">
-      </a>
       </div>
       <div class="area_item">
-      <p class="area_title">京都</p>
-      <a href="https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/rooms/search?utf8=%E2%9C%93&area=%E4%BA%AC%E9%83%BD">
+      <span>京都</span>
       <img class="area-image" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_kyoto.jpg">
-      </a>
       </div>
       <div class="area_item">
-      <p class="area_title">札幌</p>
-      <a href="https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/rooms/search?utf8=%E2%9C%93&area=%E6%9C%AD%E5%B9%8C">
+      <span>札幌</span>
       <img class="area-image" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_sapporo.jpg">
-      </a>
       </div>
-    </div>
   </div>
  </div>
 </main>

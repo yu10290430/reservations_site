@@ -23,25 +23,7 @@ nav {
 .right_nav {
     position: absolute;
     right: 25px;
-    top: 10px;
-}
-.menu_image {
-    height: 50px;
-    width: 50px;
-    border-radius: 100px;
-}
-ul#menu_list {
-    background-color: white;
-    list-style-type: none;
-    width: 180px;
-    height: 200px;
-    padding: 20px;
-}
-.menu_li {
-    margin-bottom: 7px;
-}
-a.page_link {
-    color: black;
+    top: 23px;
 }
 .sighin {
     color: white;
@@ -76,37 +58,6 @@ footer {
     position: absolute;
     height: 50px;
 }
-p.user_name {
-    color: white;
-    position: absolute;
-    right: 80px;
-    top: 10px;
-}
-
-#input {
-  position:relative; 
-  position: relative;
-    z-index: 2;
-    width: 50px;
-    height: 45px;
-    display: none;
-}
-#contens {
-    display: none;
-    position: absolute;
-    left: -160px;
-    top: 57px;
-    z-index: 2;
-}
-input:checked ~ #contens {
-    display: block;
-   
-}
-label.menu {
-    position: absolute;
-    right: 0;
-}
-
 /*メインページ*/
 main.main_page{
   height: 1000px;
@@ -158,16 +109,13 @@ input.search_button {
     border-radius: 4px;
     height: 30px;
 }
-.item_field {
-    display: flex;
-}
- .area_title{
-  position: absolute;
+span{
+  position:absolute;
   z-index: 3;
   color: white;
-  font-weight: 900;
-  font-size: 20px;
-  padding: 315px 80px;
+    font-weight: 900;
+    font-size: 20px;
+    padding: 315px 80px;
 }
 .select_area{
   font-size: 25px;
@@ -337,6 +285,7 @@ main.rooms_show_main {
 img.room_images {
     width: 600px;
     height: 350px;
+<<<<<<< HEAD
     margin-bottom: 40px;
 }
 img.room_user_image {
@@ -349,6 +298,8 @@ img.room_user_image {
     position: absolute;
     top: 480px;
     left: 290px;
+=======
+>>>>>>> parent of 7300639 (Merge pull request #6 from yu10290430/develop)
 }
 p.room_name {
     font-weight: 700;
@@ -356,11 +307,6 @@ p.room_name {
 }
 p.room_adress {
     font-size: 14px;
-}
-p.room_memo {
-    border-bottom: solid 1px #dcdcdc;
-    border-top: solid 1px #dcdcdc;
-    padding: 30px
 }
 table.relatives_new_table {
     width: 310px;
@@ -479,14 +425,6 @@ input.account_edit_btn {
     background-color: white;
     border: solid 1px black;
     border-radius: 3px;
-}
-img.user_image {
-    height: 50px;
-    border-radius: 100px;
-}
-.user_image_td {
-    width: 100%;
-    text-align: right;
 }
 /*検索画面*/
 main.search_main {

@@ -18,7 +18,7 @@
         <% @reservations.each do |reservation| %>
           <tr class= "reservations_index_tr">
             <td><%= image_tag reservation.room.room_image.url, class: 'reservation_image' %></td>
-            <td class= "reservations_index_td"><%= link_to reservation.room.room_name,room_path(reservation.room.id) %></td>
+            <td class= "reservations_index_td"><%= reservation.room.room_name %></td>
             <td class= "reservations_index_td"><%= reservation.room.memo %></td>
             <td class= "reservations_index_td">¥<%= reservation.total_price %></td>
             <td class= "reservations_index_td"><%= reservation.start_date.strftime('%Y年%m月%d日') %></td>

@@ -2,9 +2,9 @@ class Room < ApplicationRecord
   mount_uploader :room_image, ImageUploader
   belongs_to :user
   has_many :reservations, dependent: :destroy, foreign_key: 'room_id'
-  validates :room_name, presence: true, length: {maximum:30}
-  validates :memo, presence: true, length: {maximum:100}
-  validates :price, presence: true,numericality:{only_integer: true,greater_than_or_equal_to: 100, less_than_or_equal_to: 9999999}
+  validates :room_name, presence: true
+  validates :memo, presence: true
+  validates :price, presence: true,numericality: true
   validates :adress, presence: true
   validates :room_image, presence:true
   
