@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20220218035359) do
+ActiveRecord::Schema.define(version: 20220216001500) do
 
   create_table "posts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -23,8 +23,6 @@ ActiveRecord::Schema.define(version: 20220218035359) do
     t.integer  "number_of_people", null: false
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.integer  "room_id"
-    t.integer  "user_id"
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -36,7 +34,6 @@ ActiveRecord::Schema.define(version: 20220218035359) do
     t.string   "room_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|

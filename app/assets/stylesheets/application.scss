@@ -140,7 +140,7 @@ span{
 main.room_main {
     margin-top: 40px;
     margin-left: 60px;
-    height: auto;
+    height: 450px;
 }
 table.room_index_table {
   width: 800px;
@@ -155,10 +155,6 @@ tr.room_index_tr {
 td.room_index_td {
     text-align: center;
     font-size: 13px;
-}
-.room_image {
-    width: 180px;
-    height: 100px;
 }
 h5{
   margin-bottom: 20px;
@@ -223,7 +219,7 @@ th.room_lavel {
     height: 33px;
     border-radius: 4px;
 }
-tr {
+tr{
     border: solid 1px #e6e6e6;
     height: 70px;
 }
@@ -250,6 +246,7 @@ th.reservations_index_th {
 }
 /*予約ページ*/
 main.rooms_show_main {
+<<<<<<< HEAD
     width: 100%;
     margin: 20px 200px;
 }
@@ -323,4 +320,7 @@ th.reservation_lavel {
     border-radius: 3px;
     height: 32px;
     margin-top: 20px;
+=======
+    margin: 30px 300px;
+>>>>>>> parent of 1a8dc63 (Merge pull request #2 from yu10290430/develop)
 }

@@ -1,6 +1,6 @@
 class Reservation < ApplicationRecord
-  belongs_to :room
   belongs_to :user
+<<<<<<< HEAD
 <<<<<<< HEAD
   validates :start_date, presence: true
   validates :end_date, presence: true
@@ -46,4 +46,7 @@ class Reservation < ApplicationRecord
   
 =======
 >>>>>>> parent of a0252ed (Merge pull request #3 from yu10290430/develop)
+=======
+  belongs_to :room
+>>>>>>> parent of 1a8dc63 (Merge pull request #2 from yu10290430/develop)
 end

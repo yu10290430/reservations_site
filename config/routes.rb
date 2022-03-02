@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
  
   resources :posts
-  resources :rooms 
+
+  resources :rooms
+  
   resources :reservations
   
   devise_for :users
