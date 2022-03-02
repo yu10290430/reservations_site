@@ -15,32 +15,11 @@
         <a href="https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/?_c9_id=livepreview0&_c9_host=https://console.aws.amazon.com">
           <img class= "header_logo" alt="サイトのロゴ画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
         </a>
-        <div class="search_area">
-           <%= form_with url:rooms_search_path, local: true, method: :get do |f| %>
-           <%= f.text_field :area, value: @area, placeholder: "エリア" %> 
-        <% end %> 
-        </div>
-        <div class="search_key">
-           <%= form_with url:rooms_search_path, local: true, method: :get do |f| %>
-           <%= f.text_field :key, value: @key,placeholder: "キーワード" %> 
-        <% end %> 
-        </div>
         </div>
         <div class="right_nav">
-       
         <% if user_signed_in? %>
-        <p class="user_name"><%= current_user.name %></p>
-        <input type="checkbox" id="input">
-        <label for="input" class= "menu" ><%= image_tag current_user.user_image.url, class: 'menu_image'%></label>
-        <div id="contens">
-          <ul id="menu_list">
-            <li class="menu_li"><%= link_to 'ルーム登録', new_room_path,{class: "page_link"} %></li>
-            <li class="menu_li"><%= link_to '予約済みルーム一覧', reservations_path,{class: "page_link"} %></li>
-            <li class="menu_li"><%= link_to '登録済みルーム一覧', rooms_path,{class: "page_link"} %></li>
-            <li class="menu_li"><%= link_to '設定', users_account_path,{class: "page_link"} %></li>
-            <li class="menu_li"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-          </ul>
-        </div>
+        <%= link_to 'プロフィール変更', edit_user_registration_path %>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
         <% else %>
         <%= link_to 'ログイン', new_user_session_path,{class: "sighin"} %>
         <%= link_to '登録する', new_user_registration_path,{class: "sighup"} %>

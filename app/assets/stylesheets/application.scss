@@ -10,38 +10,10 @@ nav {
 .header_logo{
   margin-left: 50px;
 }
-.left_nav {
-  display: flex;
-}
-.search_area {
-    margin-top: 20px;
-    margin-right: 5px;
-}
-.search_key {
-    margin-top: 20px;
-}
 .right_nav {
     position: absolute;
     right: 25px;
-    top: 10px;
-}
-.menu_image {
-    height: 50px;
-    width: 50px;
-    border-radius: 100px;
-}
-ul#menu_list {
-    background-color: white;
-    list-style-type: none;
-    width: 180px;
-    height: 200px;
-    padding: 20px;
-}
-.menu_li {
-    margin-bottom: 7px;
-}
-a.page_link {
-    color: black;
+    top: 23px;
 }
 .sighin {
     color: white;
@@ -62,6 +34,7 @@ a.page_link {
 footer {
     background-color: black;
     height: 200px;
+    margin-top: 100px;
 }
 .footer_logo{
   color: white;
@@ -73,44 +46,12 @@ footer {
 }
 .message {
     width: 100%;
-    position: absolute;
+    position: fixed;
     height: 50px;
 }
-p.user_name {
-    color: white;
-    position: absolute;
-    right: 80px;
-    top: 10px;
-}
-
-#input {
-  position:relative; 
-  position: relative;
-    z-index: 2;
-    width: 50px;
-    height: 45px;
-    display: none;
-}
-#contens {
-    display: none;
-    position: absolute;
-    left: -160px;
-    top: 57px;
-    z-index: 2;
-}
-input:checked ~ #contens {
-    display: block;
-   
-}
-label.menu {
-    position: absolute;
-    right: 0;
-}
-
 /*メインページ*/
 main.main_page{
   height: 1000px;
-  margin-bottom: 30px;
 }
 .top_main{
   background-image: url("https://presite-potepancamp-rails-02.herokuapp.com/assets/img_cover_top.jpg");
@@ -134,7 +75,6 @@ h3.form_area_title {
 }
 p.search_lavel {
     font-size: 13px;
-    margin-bottm: 0;
 }
 .form_area {
     background-color: white;
@@ -146,28 +86,13 @@ p.search_lavel {
     left: 150px;
     padding: 25px 20px;
 }
-input.top_search_area {
-    width: 100%;
-    margin-bottom: 20px;
-}
-input.search_button {
-    width: 100%;
-    color: white;
-    background-color: #00bfff;
-    border: none;
-    border-radius: 4px;
-    height: 30px;
-}
-.item_field {
-    display: flex;
-}
- .area_title{
-  position: absolute;
+span{
+  position:absolute;
   z-index: 3;
   color: white;
-  font-weight: 900;
-  font-size: 20px;
-  padding: 315px 80px;
+    font-weight: 900;
+    font-size: 20px;
+    padding: 315px 80px;
 }
 .select_area{
   font-size: 25px;
@@ -177,7 +102,7 @@ input.search_button {
 /*新規登録、ログインページ*/
 .sighup_main{
   text-align: center;
-  margin-left: auto;
+  margin-left:auto;
   margin-right: auto;
   margin-top: 100px;
   height: 350px;
@@ -215,8 +140,7 @@ input.search_button {
 main.room_main {
     margin-top: 40px;
     margin-left: 60px;
-    height: auto;
-    margin-bottom: 200px;
+    height: 450px;
 }
 table.room_index_table {
   width: 800px;
@@ -232,17 +156,13 @@ td.room_index_td {
     text-align: center;
     font-size: 13px;
 }
-.room_image {
-    width: 180px;
-    height: 100px;
-}
 h5{
   margin-bottom: 20px;
 }
 
 /*room_new*/
 main.room_new {
-    height: 700px;
+    height: 600px;
 }
 .room_nav {
     height: 700px;
@@ -299,14 +219,14 @@ th.room_lavel {
     height: 33px;
     border-radius: 4px;
 }
-tr {
+tr{
     border: solid 1px #e6e6e6;
     height: 70px;
 }
 
 /*予約一覧ページ*/
 main.reservations_index_main {
-    height: auto;
+    height: 700px;
     width: 100%;
     margin: 30px 50px;
 }
@@ -326,6 +246,7 @@ th.reservations_index_th {
 }
 /*予約ページ*/
 main.rooms_show_main {
+<<<<<<< HEAD
     width: 100%;
     margin: 20px 200px;
 }
@@ -336,7 +257,11 @@ main.rooms_show_main {
 }
 img.room_images {
     width: 600px;
+<<<<<<< HEAD
     height: 350px;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     margin-bottom: 40px;
 }
 img.room_user_image {
@@ -349,6 +274,14 @@ img.room_user_image {
     position: absolute;
     top: 480px;
     left: 290px;
+=======
+>>>>>>> parent of 7300639 (Merge pull request #6 from yu10290430/develop)
+=======
+>>>>>>> parent of 7300639 (Merge pull request #6 from yu10290430/develop)
+=======
+>>>>>>> parent of 7300639 (Merge pull request #6 from yu10290430/develop)
+=======
+>>>>>>> parent of 7963cef (Merge pull request #4 from yu10290430/develop)
 }
 p.room_name {
     font-weight: 700;
@@ -356,11 +289,6 @@ p.room_name {
 }
 p.room_adress {
     font-size: 14px;
-}
-p.room_memo {
-    border-bottom: solid 1px #dcdcdc;
-    border-top: solid 1px #dcdcdc;
-    padding: 30px
 }
 table.relatives_new_table {
     width: 310px;
@@ -392,185 +320,7 @@ th.reservation_lavel {
     border-radius: 3px;
     height: 32px;
     margin-top: 20px;
-}
-.reservation_image {
-    width: 200px;
-}
-/*予約詳細ページ*/
-main.reservation_show_main {
-    background-color: #fffaf0;
-    height: 550px;
-}
-table.relatives_show_table {
-    margin: 40px auto;
-    width: 700px;
-    background-color: white;
-}
-tr.reservation_show_field {
-    height: 60px;
-}
-th.reservation_show_lavel {
-    width: 200px;
-    padding-left: 30px;
-}
-/*アカウント*/
-main.account_view {
-    background-color: #f5f5f5;
-    height: 600px;
-}
-.left-nav {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-    padding-left: 60px;
-    height: 600px;
-    background-color: white;
-}
-.account_link{
-    color: black;
-    margin-bottom: 15px;
-}
-.user_field {
-    margin: 20px auto;
-}
-table.user_table {
-    background-color: white;
-    width: 700px;
-}
-th.account_th {
-    padding-left: 30px;
-}
-.btn.btn-primary {
-    width: 120px;
-}
-
-/*プロフィール*/
-th.profile_th {
-    padding-left: 25px;
-}
-/*アカウント編集画面*/
-main.account_edit_main {
-    height: 550px;
-}
-.account_edit_index {
-    width: 100%;
-    text-align: center;
-    margin-top: 60px;
-}
-.account_edit_field {
-    width: 300px;
-    border: solid 1px #e6e6e6;
-    height: 30px;
-    margin-bottom: 10px;
-}
-input.account_edit_btn {
-    width: 300px;
-    background-color: #00bfff;
-    color: white;
-    border: none;
-    height: 30px;
-    border-radius: 3px;
-    margin-top: 10px;
-    margin-bottom: 25px;
-}
-.back_link{
-    padding: 5px 132px;
-    background-color: white;
-    border: solid 1px black;
-    border-radius: 3px;
-}
-img.user_image {
-    height: 50px;
-    border-radius: 100px;
-}
-.user_image_td {
-    width: 100%;
-    text-align: right;
-}
-/*検索画面*/
-main.search_main {
-    margin: 30px 50px;
-}
-h3.search_result {
-    font-size: 23px;
-    margin-bottom: 30px;
-}
-.col-3 {
-    border: solid 1px #e6e6e6;
-    margin-right: 30px;
-    margin-bottom: 10px;
-    padding: 0;
-    flex: 0 0 24%;
-    max-width: 22%;
-}
-p.search_name {
-    font-weight: 700;
-    color: grey;
-    margin-left: 10px;
-}
-p.search_adress {
-    font-family: sans-serif;
-    font-size: 13px;
-    font-weight: 900;
-    margin-left: 10px;
-}
-p.search_price {
-    text-align: right;
-    margin-right: 10px;
-}
-.room_image {
-    width: 100%;
-    height: 150px;
-}
-/*予約確認ページ*/
-table.confirm_table {
-    margin: 40px auto;
-    width: 450px;
-}
-tbody.confirm_tbody {
-    border: solid 1px #dcdcdc;
-}
-tr.confirm_tr {
-    height: 50px;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px
-}
-td.confirm_title {
-    padding-left: 15px;
-    font-weight: 600;
-    font-size: 20px;
-}
-td.confirm_td {
-    padding-left: 15px;
-    margin-top: 20px;
-}
-td.confirm_btn {
-    padding: 0 15px;
-}
-td.confirm_td_date {
-    background-color: #dcdcdc;
-    border-radius: 4px;
-    margin: 10px 15px;
-}
-th.confirm_th {
-    padding-left: 15px;
-}
-p.confirm_instructions {
-    font-size: 12px;
-}
-.confirm_bule_btn {
-    border: none;
-    background-color: #00bfff;
-    color: white;
-    padding: 3px 158px;
-    border-radius: 4px;
-}
-.confirm_gray_btn {
-    background-color: gray;
-    color: white;
-    border-radius: 3px;
-    padding: 5px 135px;
+=======
+    margin: 30px 300px;
+>>>>>>> parent of 1a8dc63 (Merge pull request #2 from yu10290430/develop)
 }

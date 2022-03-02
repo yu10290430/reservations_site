@@ -1,37 +1,51 @@
+<<<<<<< HEAD
 <main class="rooms_show_main">
 <div class= "row">
- 
  <div class="room_navs">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   <a><%=  image_tag @room.room_image.url, class: 'room_images' %></a>
   <a><%= image_tag current_user.user_image.url, class: 'room_user_image'%></a>
   <div class="image_right">
+=======
+  <%=  image_tag @room.room_image.url, class: 'room_images' %>
+>>>>>>> parent of 7300639 (Merge pull request #6 from yu10290430/develop)
+=======
+  <%=  image_tag @room.room_image.url, class: 'room_images' %>
+>>>>>>> parent of 7300639 (Merge pull request #6 from yu10290430/develop)
+=======
+  <%=  image_tag @room.room_image.url, class: 'room_images' %>
+>>>>>>> parent of 7300639 (Merge pull request #6 from yu10290430/develop)
+=======
+  <%=  image_tag @room.room_image, class: 'room_images' %>
+>>>>>>> parent of 7963cef (Merge pull request #4 from yu10290430/develop)
   <p class="room_name"><%= @room.room_name %></p>
   <p class="room_adress"><%= @room.adress %></p>
-  </div>
   <p class="room_memo"><%= @room.memo %></p>
   </div>
 
  <div class="reservation-box">
-   <%= form_with model:@reservation,method: :post, url:reservations_confirm_path do |f| %>
-   <%= f.hidden_field :room_id, value: @room.id %>
+   <%= form_tag({ :controller => 'reservations', :action => 'create' },{ :method => :post}) do %>
       <table class="relatives_new_table">
         <tr class= "reservation_text_field">
          <td class="room_price">¥<%= @room.price %> / 日</td>
         </tr>
         <tr class= "reservation_text_field">
-          <th class="reservation_lavel"><%= f.label :start_date ,"開始日" %></th>
-          <td class="reservation_new_td"><%= f.date_field :start_date,placeholder: "年/月/日",:class => 'reservation_field'%></td>
+          <th class="reservation_lavel"><%= label :session,:start_date ,"開始日" %></th>
+          <td class="reservation_new_td"><%= date_field :session, :start_date,placeholder: "年/月/日",:class => 'reservation_field'%></td>
         </tr>
          <tr class= "reservation_text_field">
-          <th class="reservation_lavel"><%= f.label :end_date ,"終了日" %></th>
-          <td class="reservation_new_td"><%= f.date_field :end_date,placeholder: "年/月/日",:class => 'reservation_field'%></td>
+          <th class="reservation_lavel"><%= label :session,:end_date ,"終了日" %></th>
+          <td class="reservation_new_td"><%= date_field :session,:end_date,placeholder: "年/月/日",:class => 'reservation_field'%></td>
         </tr>
         <tr class= "reservation_text_field">
-          <th class="reservation_lavel"><%= f.label :number_of_people ,"人数" %></th>
-          <td class="reservation_new_td"><%= f.text_field :number_of_people,:class => 'reservation_field'%></td>
+          <th class="reservation_lavel"><%= label :session,:number_of_people ,"人数" %></th>
+          <td class="reservation_new_td"><%= text_field :session,:number_of_people,:class => 'reservation_field'%></td>
         </tr>
         <tr class= "reservation_text_field">
-          <td class="reservation_new_td"> <%= f.submit "予約する",:class => 'reservation_register'%></td>
+          <td class="reservation_new_td"> <%= submit_tag "予約する",:class => 'reservation_register'%></td>
         </tr>
     <% end %>
      </table>
@@ -40,3 +54,5 @@
 </main>  
 </main>
 
+=======
+>>>>>>> parent of 1a8dc63 (Merge pull request #2 from yu10290430/develop)

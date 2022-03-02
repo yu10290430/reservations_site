@@ -1,20 +1,2 @@
-<main class="reservation_show_main">
-      <table class="relatives_show_table">
-        <tr class= "reservation_show_field">
-          <th class="reservation_show_lavel">予約した部屋</th>
-          <td class="reservation_show_td"><%= @reservation.room.room_name %></td>
-        </tr>
-         <tr class= "reservation_show_field">
-          <th class="reservation_show_lavel">開始日</th>
-          <td class="reservation_show_td"><%= @reservation.start_date.strftime('%Y年%m月%d日') %></td>
-        </tr>
-        <tr class= "reservation_show_field">
-          <th class="reservation_show_lavel">終了日</th>
-          <td class="reservation_show_td"><%= @reservation.end_date.strftime('%Y年%m月%d日') %></td>
-        </tr>
-        <tr class= "reservation_show_field">
-          <th class="reservation_show_lavel">価格</th>
-          <td class="reservation_show_td"><%= @reservation.total_price %>円</td>
-        </tr>
-     </table>
-</main>
+<h1>Reservations#show</h1>
+<p>Find me in app/views/reservations/show.html.erb</p>

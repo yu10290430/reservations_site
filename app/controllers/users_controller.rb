@@ -1,24 +1,24 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
-   
-  def account
-    @user = current_user
+  def index
   end
   
+  def new
+  end
+  
+  def create
+  end
+<<<<<<< HEAD
+=======
+
+  def show
+  end
+<<<<<<< HEAD
+>>>>>>> parent of f2b9aaa (Merge pull request #5 from yu10290430/develop)
+  
+=======
+
+>>>>>>> parent of a0252ed (Merge pull request #3 from yu10290430/develop)
   def edit
-    @user = User.find(params[:id])
   end
-  
-  def update
-    @user = User.find(params[:id])
-    if @user.update(params.require(:user).permit(:user_image, :name, :introduction))
-      flash[:notice]="ユーザーIDが「#{@user.id}」の情報を更新しました"
-      redirect_to :posts
-    else
-      flash.now[:notice]="更新に失敗しました。もう一度入力し直してください"
-      render "users/profile"
-    end
-  end
-    
-  
+
 end
