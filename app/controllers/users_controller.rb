@@ -7,6 +7,13 @@ class UsersController < ApplicationController
   def account
     @user = current_user
   end
+<<<<<<< HEAD
+=======
+
+  def profile
+     @user = User.where(user_id: current_user.id).where.not(user_image: nil).order(updated_at: 'DESC')
+  end
+>>>>>>> parent of f2b9aaa (Merge pull request #5 from yu10290430/develop)
   
   def edit
     @user = current_user
