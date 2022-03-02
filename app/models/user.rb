@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  mount_uploader :user_image, ImageUploader
   validates :name, presence: {message: 'を入力してください'}
   belongs_to :post
   has_many :reservations, dependent: :destroy, foreign_key: 'user_id'
@@ -9,4 +8,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+         
+  
+  mount_uploader :user_image, ImageUploader
 end
