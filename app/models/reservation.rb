@@ -4,6 +4,7 @@ class Reservation < ApplicationRecord
   validates :start_date, presence: true
   validates :end_date, presence: true
 <<<<<<< HEAD
+<<<<<<< HEAD
   validates :number_of_people, presence: true, numericality: true
   validate :start_end_check
   validate :date_before_start
@@ -16,6 +17,9 @@ class Reservation < ApplicationRecord
   def date_before_start
    errors.add(:start_date, "は今日以降のものを選択してください")if start_date != nil && end_date != nil && start_date < Date.today
   end
+=======
+  validates :number_of_people, presence:true, numericality:true
+>>>>>>> parent of 7300639 (Merge pull request #6 from yu10290430/develop)
 =======
   validates :number_of_people, presence:true, numericality:true
 >>>>>>> parent of 7300639 (Merge pull request #6 from yu10290430/develop)

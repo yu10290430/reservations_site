@@ -16,7 +16,12 @@ Rails.application.routes.draw do
   post 'reservations/confirm' => 'reservations#confirm'
   post 'reservations/back'
 <<<<<<< HEAD
+<<<<<<< HEAD
   resources :reservations, only: [:index, :create, :show] 
+=======
+  resources :reservations, only: [:index, :new, :create, :show]
+  
+>>>>>>> parent of 7300639 (Merge pull request #6 from yu10290430/develop)
 =======
   resources :reservations, only: [:index, :new, :create, :show]
   
