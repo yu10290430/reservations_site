@@ -1,9 +1,11 @@
 class ReservationsController < ApplicationController
   def index
     @reservations = current_user.reservations.order(updated_at: 'DESC')
+
   end
 
   def new
+    @room = Room.find(params[:id])
     @reservation = Reservation.new
   end
   
@@ -14,7 +16,7 @@ class ReservationsController < ApplicationController
       redirect_to :reservations
     else
       flash.now[:error] = "予約できませんでした。もう一度入力し直してください。"
-      render "rooms/show" 
+      render template: "rooms/show"
     end
     
    
@@ -22,7 +24,7 @@ class ReservationsController < ApplicationController
   end
 
   def show
-   
+    @room = Room.find_by(id: params[:id])
   end
   
   def edit

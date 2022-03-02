@@ -15,16 +15,6 @@
         <a href="https://3652e5c0c10e4ac394f4f84f03c444db.vfs.cloud9.us-east-1.amazonaws.com/?_c9_id=livepreview0&_c9_host=https://console.aws.amazon.com">
           <img class= "header_logo" alt="サイトのロゴ画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
         </a>
-        <div class="search_area">
-           <%= form_with url:rooms_search_path, local: true, method: :get do |f| %>
-           <%= f.text_field :area, value: @area, placeholder: "エリア" %> 
-        <% end %> 
-        </div>
-        <div class="search_key">
-           <%= form_with url:rooms_search_path, local: true, method: :get do |f| %>
-           <%= f.text_field :key, value: @key,placeholder: "キーワード" %> 
-        <% end %> 
-        </div>
         </div>
         <div class="right_nav">
         <% if user_signed_in? %>

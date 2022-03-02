@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <a><%=  image_tag @room.room_image.url, class: 'room_images' %></a>
   <a><%= image_tag current_user.user_image.url, class: 'room_user_image'%></a>
   <div class="image_right">
@@ -16,13 +17,16 @@
 =======
   <%=  image_tag @room.room_image.url, class: 'room_images' %>
 >>>>>>> parent of 7300639 (Merge pull request #6 from yu10290430/develop)
+=======
+  <%=  image_tag @room.room_image, class: 'room_images' %>
+>>>>>>> parent of 7963cef (Merge pull request #4 from yu10290430/develop)
   <p class="room_name"><%= @room.room_name %></p>
   <p class="room_adress"><%= @room.adress %></p>
   <p class="room_memo"><%= @room.memo %></p>
   </div>
 
  <div class="reservation-box">
-   <%= form_with model:@reservation do |f| %>
+   <%= form_for (@reservation) do |f| %>
    <%= f.hidden_field :room_id, value: @room.id %>
       <table class="relatives_new_table">
         <tr class= "reservation_text_field">

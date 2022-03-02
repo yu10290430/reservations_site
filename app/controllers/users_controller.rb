@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 =======
 
   def profile
-     @user = User.where(user_id: current_user.id).where.not(user_image: nil).order(updated_at: 'DESC')
+    @user = User.find_by(id: current_user.id)
   end
 >>>>>>> parent of f2b9aaa (Merge pull request #5 from yu10290430/develop)
   
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     @user = current_user
   end
   
-  def update
+  def updated
     @user = current_user
     if @user.update(params.require(:user).permit(:user_image, :name, :introduction))
       flash[:notice]="ユーザーIDが「#{@user.id}」の情報を更新しました"

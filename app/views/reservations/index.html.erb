@@ -17,7 +17,7 @@
       <tbody>
         <% @reservations.each do |reservation| %>
           <tr class= "reservations_index_tr">
-            <td><%= image_tag reservation.room.room_image.url, class: 'reservation_image' %></td>
+            <td><%= image_tag reservation.room.room_image, class: 'reservation_image' %></td>
             <td class= "reservations_index_td"><%= reservation.room.room_name %></td>
             <td class= "reservations_index_td"><%= reservation.room.memo %></td>
             <td class= "reservations_index_td"><%= reservation.total_price %></td>

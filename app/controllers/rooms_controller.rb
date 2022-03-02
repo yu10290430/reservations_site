@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   def index
-     @rooms = Room.where(user_id: current_user.id).where.not(room_image: nil).order(updated_at: 'DESC')
+     @rooms = current_user.rooms.order(updated_at: 'DESC')
   end
 
   def new
@@ -23,14 +23,6 @@ class RoomsController < ApplicationController
   end
   
   def search
-    @area = params[:area]
-    @key = params[:key]
-    if @area != nil 
-     @rooms = Room.search(params[:area])
-    elsif @key != nil 
-     @rooms = Room.search(params[:key])
-    else
-     @rooms = Room.all
-    end
+    @rooms = Room.all
   end
 end
